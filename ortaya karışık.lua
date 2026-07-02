@@ -1,8 +1,13 @@
---[[ 
-    EXECUTOR STANDALONE SCRIPT 
-    Bu kod, oyuna girdiği an GUI oluşturur ve sistemi aktif eder.
-]]
+-- Xeno Başlatıcı Kontrolü
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
 
+-- Karakterin tamamen yüklendiğinden emin ol
+if not player.Character then 
+    player.CharacterAdded:Wait() 
+end
+
+-- Kodunu buranın altına ekle...
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local player = Players.LocalPlayer
